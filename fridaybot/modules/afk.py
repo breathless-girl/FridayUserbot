@@ -45,7 +45,7 @@ async def _(event):
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
             await borg.send_message(
-                event.chat_id, f"**My Master Seems To Be Too Busy 👀.** \n__He Going Afk Because Of__ `{reason}`"
+                event.chat_id, f"**My Master Seems To Be Too Busy 👀.** \n__She Going Afk Because Of__ `{reason}`"
             )
         else:
             await borg.send_message(event.chat_id, f"**I Am Busy And I Am Going Afk**.")
@@ -154,9 +154,9 @@ async def on_afk(event):
         msg = None
         message_to_reply = (
             f"**My Boss is Afk**  \n**AFKT** : `{total_afk_time}`\n**Reason** : `{reason}`"
-            + f"\n\nHe Will Reply To You Soon!"
+            + f"\n\nShe Will Reply To You Soon!"
             if reason
-            else f"**My Master is Afk**\n AFK : `{total_afk_time}` He Will Comeback Soon"
+            else f"**My Master is Afk**\n AFK : `{total_afk_time}` She Will Comeback Soon"
         )
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
